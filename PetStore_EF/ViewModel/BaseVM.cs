@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows;
 using System.Windows.Input;
 
 namespace PetStore_EF.ViewModel
@@ -17,7 +19,17 @@ namespace PetStore_EF.ViewModel
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
+		public FrameworkElement getParents(UserControl control)
+		{
+			FrameworkElement parent = control;
+			while (parent.Parent != null)
+			{
+				parent = parent.Parent as FrameworkElement;
+			}
+			return parent;
+		}
 	}
+	
 	class RelayCommand<T> : ICommand
 	{
 		private readonly Predicate<T> _canExecute;

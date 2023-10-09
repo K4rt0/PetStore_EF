@@ -1,5 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:vm="clr-namespace:PetStore_EF.ViewModel"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Window -->
     <vm:MainVM x:Key="MainVM"/>
+    <vm:LoginVM x:Key="LoginVM"/>
+    
+    <!-- User Control -->
+    <vm:ControlBarVM x:Key="ControlBarVM"/>
+    <vm:UC_Menu_ProductVM x:Key="UC_Menu_ProductVM"/>
 </ResourceDictionary>

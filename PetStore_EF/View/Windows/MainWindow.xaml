@@ -1,0 +1,74 @@
+﻿<Window x:Class="PetStore_EF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetStore_EF"
+        mc:Ignorable="d"
+        
+        DataContext="{StaticResource MainVM}"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:uc="clr-namespace:PetStore_EF.View.UserControls"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        x:Name="mainWindow"
+        Title="Trang chủ" Height="600" Width="900">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedMainWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <uc:UC_ControlBar Tag="{Binding Title, ElementName=mainWindow}" Grid.Row="0"/>
+        <Border Background="#D9D9D9" CornerRadius="0 0 10 10" Grid.Row="1">
+            <Grid Margin="0 1 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Menu Button -->
+                <Grid Grid.Column="0">
+                    <Border Background="#373737" Width="200" CornerRadius="0 0 0 8">
+                        <DockPanel Margin="15" LastChildFill="False">
+                            <!-- Avatar -->
+                            <Ellipse DockPanel.Dock="Top" Width="120" Height="120">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\avatar.png"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <TextBlock DockPanel.Dock="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="20" FontWeight="SemiBold" Foreground="#ffffff"
+                                   Margin="0 -10 0 0"
+                                   Text="Admin"/>
+                            <!-- Menu Button -->
+                            <Grid DockPanel.Dock="Top" Margin="0 20 0 0">
+                                <StackPanel>
+                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\home.png" Content="Trang chủ" Style="{StaticResource menuButton}"/>
+                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\customer.png" Content="Khách hàng" Style="{StaticResource menuButton}"/>
+                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\product.png" Content="Sản phẩm" Style="{StaticResource menuButton}"/>
+                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\report.png" Content="Báo cáo" Style="{StaticResource menuButton}"/>
+                                </StackPanel>
+                            </Grid>
+                            <!-- Logout Button -->
+                            <Button DockPanel.Dock="Bottom" Style="{StaticResource btnLogout}"/>
+                        </DockPanel>
+                    </Border>
+                </Grid>
+
+                <!-- Main Menu -->
+                <Grid Grid.Column="1" Margin="1 0 0 0">
+                    <uc:UC_Menu_Product/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

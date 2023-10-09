@@ -2,5 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="R_ViewModel.xaml"/>
+        <ResourceDictionary Source="R_ControlBar.xaml"/>
+        <ResourceDictionary Source="R_Login.xaml"/>
+        
+        <ResourceDictionary Source="MainWindow\R_Product.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
