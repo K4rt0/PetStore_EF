@@ -27,7 +27,7 @@
                     <Border  Width="40" Height="60" CornerRadius="5" Background="{TemplateBinding Background}">
                         <StackPanel VerticalAlignment="Center">
                             <Border Width="30" Height="30" CornerRadius="50" Background="#d7d7d7">
-                                <Image Stretch="Uniform" Width="20" Source="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\save.png"/>
+                                <Image Stretch="Uniform" Width="20" Source="\Assets\save.png"/>
                             </Border>
                             <TextBlock Margin="0 2 0 0" Text="Lưu" HorizontalAlignment="Center"
                                        Foreground="#d7d7d7" FontSize="12" FontWeight="SemiBold"/>

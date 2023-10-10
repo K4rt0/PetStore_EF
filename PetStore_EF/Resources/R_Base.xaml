@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="R_MenuUC.xaml"/>
         <ResourceDictionary Source="R_ViewModel.xaml"/>
         <ResourceDictionary Source="R_ControlBar.xaml"/>
         <ResourceDictionary Source="R_Login.xaml"/>

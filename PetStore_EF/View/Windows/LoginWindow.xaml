@@ -28,12 +28,12 @@
                     <TextBlock Style="{StaticResource txbHudLogin}" Text="Tên đăng nhập"/>
                     <Grid>
                         <TextBox Style="{StaticResource txtHudUser}"/>
-                        <Image Style="{StaticResource imgIconLogin}" Source="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets/user.png"/>
+                        <Image Style="{StaticResource imgIconLogin}" Source="\Assets\user.png"/>
                     </Grid>
                     <TextBlock Style="{StaticResource txbHudLogin}" Text="Mật khẩu"/>
                     <Grid>
                         <PasswordBox Style="{StaticResource pwbHudUser}"/>
-                        <Image Style="{StaticResource imgIconLogin}" Source="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets/password.png"/>
+                        <Image Style="{StaticResource imgIconLogin}" Source="\Assets\password.png"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
