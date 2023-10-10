@@ -75,6 +75,7 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
         <Setter Property="Foreground" Value="#C6BCBC"/>
         <Setter Property="Background" Value="#8C8787"/>
         <Setter Property="Template">
@@ -86,10 +87,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
 
-                            <Track x:Name="PART_Track"
-                           Grid.Row="0"
-                           IsDirectionReversed="True"
-                           Focusable="False">
+                            <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="True" Focusable="False">
                                 <Track.Thumb>
                                     <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" Style="{DynamicResource ScrollThumbs}"/>
                                 </Track.Thumb>

@@ -8,4 +8,5 @@
     <!-- User Control -->
     <vm:ControlBarVM x:Key="ControlBarVM"/>
     <vm:UC_Menu_ProductVM x:Key="UC_Menu_ProductVM"/>
+    <vm:UC_BillVM x:Key="UC_BillVM"/>
 </ResourceDictionary>
