@@ -1,6 +1,4 @@
-﻿using PetStore_EF.View.UserControls;
-using PetStore_EF.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PetStore_EF
+namespace PetStore_EF.View.UserControls.Menu
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Interaction logic for UC_Bill.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class UC_Bill : UserControl
 	{
-		public MainWindow()
+		public UC_Bill()
 		{
 			InitializeComponent();
 		}
-    }
+	}
 }

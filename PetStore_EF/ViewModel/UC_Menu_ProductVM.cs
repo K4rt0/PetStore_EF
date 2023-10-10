@@ -15,9 +15,7 @@ namespace PetStore_EF.ViewModel
 	public class UC_Menu_ProductVM : BaseVM
 	{
 		private ObservableCollection<Product> _products;
-
-		public ObservableCollection<Product> Products { get; private set; }
-
+		public ObservableCollection<Product> Products { get => _products; set => _products = value; }
 		public UC_Menu_ProductVM()
 		{
 			Products = new ObservableCollection<Product>

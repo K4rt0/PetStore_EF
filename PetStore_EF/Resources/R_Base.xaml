@@ -6,5 +6,6 @@
         <ResourceDictionary Source="R_Login.xaml"/>
         
         <ResourceDictionary Source="MainWindow\R_Product.xaml"/>
+        <ResourceDictionary Source="MainWindow\R_Bill.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

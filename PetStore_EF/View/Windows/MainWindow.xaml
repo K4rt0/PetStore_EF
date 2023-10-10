@@ -52,10 +52,10 @@
                             <!-- Menu Button -->
                             <Grid DockPanel.Dock="Top" Margin="0 20 0 0">
                                 <StackPanel>
-                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\home.png" Content="Trang chủ" Style="{StaticResource menuButton}"/>
-                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\customer.png" Content="Khách hàng" Style="{StaticResource menuButton}"/>
-                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\product.png" Content="Sản phẩm" Style="{StaticResource menuButton}"/>
-                                    <RadioButton Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\report.png" Content="Báo cáo" Style="{StaticResource menuButton}"/>
+                                    <RadioButton x:Name="rdBtnHome" Command="{Binding LoadUCProduct}" CommandParameter="{Binding ElementName=contentCtl}" Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\home.png" Content="Trang chủ" Style="{StaticResource menuButton}"/>
+                                    <RadioButton x:Name="rdBtnCustomer" Command="{Binding LoadUCProduct}" CommandParameter="{Binding ElementName=contentCtl}" Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\customer.png" Content="Khách hàng" Style="{StaticResource menuButton}"/>
+                                    <RadioButton x:Name="rdBtnProduct" Command="{Binding LoadUCProduct}" CommandParameter="{Binding ElementName=contentCtl}" Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\product.png" Content="Sản phẩm" Style="{StaticResource menuButton}"/>
+                                    <RadioButton x:Name="rdBtnReport" Command="{Binding LoadUCProduct}" CommandParameter="{Binding ElementName=contentCtl}" Tag="C:\Users\K4rt0\Desktop\WindowsProgram\PetStore\Assets\report.png" Content="Báo cáo" Style="{StaticResource menuButton}"/>
                                 </StackPanel>
                             </Grid>
                             <!-- Logout Button -->
@@ -66,6 +66,7 @@
 
                 <!-- Main Menu -->
                 <Grid Grid.Column="1" Margin="1 0 0 0">
+                    <!--<ContentControl x:Name="contentCtl"/>-->
                     <uc:UC_Menu_Product/>
                 </Grid>
             </Grid>
