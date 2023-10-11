@@ -36,15 +36,15 @@ namespace PetStore_EF.ViewModel
 		public UC_BillVM()
 		{
 			ListItemSelected = new ObservableCollection<ItemSelected> {
-				new ItemSelected("1.", "Thức ăn cho chó", 10, 1000),
-				new ItemSelected("2.", "12312321", 10, 1000),
-				new ItemSelected("3.", "!@#!@#", 10, 1000),
-				new ItemSelected("4.", "aaasdhó", 10, 1000),
-				new ItemSelected("4.", "aaasdhó", 10, 1000),
-				new ItemSelected("4.", "aaasdhó", 10, 1000),
-				new ItemSelected("4.", "aaasdhó", 10, 1000),
-				new ItemSelected("4.", "aaasdhó", 10, 1000),
-				new ItemSelected("5.", "@42141aaAsad chó", 10, 1000)
+				new ItemSelected("1.", "Thức ăn cho chó", 10, 100000000),
+				new ItemSelected("2.", "12312321", 10, 100000000),
+				new ItemSelected("3.", "!@#!@#", 10, 100000000),
+				new ItemSelected("4.", "aaasdhó", 10, 100000000),
+				new ItemSelected("4.", "aaasdhó", 10, 100000000),
+				new ItemSelected("4.", "aaasdhó", 10, 100000000),
+				new ItemSelected("4.", "aaasdhó", 10, 100000000),
+				new ItemSelected("4.", "aaasdhó", 10, 100000000),
+				new ItemSelected("5.", "@42141aaAsad chó", 10, 100000000)
 			};
 		}
 
