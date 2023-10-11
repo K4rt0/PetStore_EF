@@ -40,11 +40,11 @@ namespace PetStore_EF.ViewModel
 				new ItemSelected("2.", "12312321", 10, 100000000),
 				new ItemSelected("3.", "!@#!@#", 10, 100000000),
 				new ItemSelected("4.", "aaasdhó", 10, 100000000),
-				new ItemSelected("4.", "aaasdhó", 10, 100000000),
-				new ItemSelected("4.", "aaasdhó", 10, 100000000),
-				new ItemSelected("4.", "aaasdhó", 10, 100000000),
-				new ItemSelected("4.", "aaasdhó", 10, 100000000),
-				new ItemSelected("5.", "@42141aaAsad chó", 10, 100000000)
+				new ItemSelected("5.", "aa@232asdhó", 10, 100000000),
+				new ItemSelected("6.", "asdasaasdhó", 10, 100000000),
+				new ItemSelected("7.", "a4214sdasdaasdhó", 10, 100000000),
+				new ItemSelected("8.", "aa4141asdhó", 10, 100000000),
+				new ItemSelected("9.", "@42141aaAsad chó", 10, 100000000)
 			};
 		}
 

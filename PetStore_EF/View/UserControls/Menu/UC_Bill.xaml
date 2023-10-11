@@ -43,7 +43,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <Separator Grid.Row="1" Width="Auto" Background="#373737"/>
-                    <DataGrid Margin="5" RowStyle="{DynamicResource dgRow}" Style="{DynamicResource dgListItem}" CellStyle="{DynamicResource dgCell}" ColumnHeaderStyle="{DynamicResource dgColumnHeader}" Grid.Row="0" HorizontalScrollBarVisibility="Hidden" x:Name="dgvProduct" ItemsSource="{Binding ListItemSelected}">
+                    <DataGrid Grid.Row="2" Margin="5" RowStyle="{DynamicResource dgRow}" Style="{DynamicResource dgListItem}" CellStyle="{DynamicResource dgCell}" ColumnHeaderStyle="{DynamicResource dgColumnHeader}" AutoGenerateColumns="False"  HorizontalScrollBarVisibility="Hidden" ItemsSource="{Binding ListItemSelected}">
                         <DataGrid.Columns>
                             <DataGridTemplateColumn Header="" CanUserResize="False" IsReadOnly="True" Width="Auto">
                                 <DataGridTemplateColumn.CellTemplate>
@@ -53,7 +53,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                             <DataGridTextColumn CanUserResize="False" IsReadOnly="True" Width="Auto" Header="" Binding="{Binding Stt}"/>
-                            <DataGridTextColumn CanUserResize="False" IsReadOnly="True" Width="0.2*" Header="Sản phẩm" Binding="{Binding Name}"/>
+                            <DataGridTextColumn CanUserResize="False" IsReadOnly="True" Width="0.2*" Header="Dịch vụ" Binding="{Binding Name}"/>
                             <DataGridTextColumn CanUserResize="False" IsReadOnly="True" Width="0.1*" Header="SL" Binding="{Binding Amount}"/>
                             <DataGridTextColumn CanUserResize="False" IsReadOnly="True" Width="0.1*" Header="Đơn giá" Binding="{Binding Price}"/>
                         </DataGrid.Columns>
