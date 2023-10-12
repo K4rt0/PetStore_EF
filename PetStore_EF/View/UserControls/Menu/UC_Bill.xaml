@@ -63,18 +63,14 @@
             </Border>
         </Grid>
         <Grid Margin="5" Grid.Row="2">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
 
             <DockPanel Grid.Row="0" LastChildFill="False">
-                <Button DockPanel.Dock="Left" Style="{StaticResource btnSaveBill}"/>
-                <TextBlock DockPanel.Dock="Right" Text="Tổng: 100.000.000vnđ" Style="{StaticResource txbPrice}"/>
+                <TextBlock DockPanel.Dock="Top" Text="Tổng: 100.000.000vnđ" Style="{StaticResource txbPrice}"/>
+                <Button DockPanel.Dock="Right" Content="HUỶ" Style="{StaticResource btnCancel}"/>
+                <Button DockPanel.Dock="Right" Content="THANH TOÁN" Style="{StaticResource btnPayment}"/>
             </DockPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 5 0 5" HorizontalAlignment="Right">
-                <Button Content="THANH TOÁN" Style="{StaticResource btnPayment}"/>
-                <Button Content="HUỶ" Style="{StaticResource btnCancel}"/>
+                
             </StackPanel>
         </Grid>
     </Grid>

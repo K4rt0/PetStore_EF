@@ -1,0 +1,42 @@
+CREATE DATABASE PetStore
+GO
+USE PetStore
+GO
+CREATE TABLE Role (
+	id int identity(1,1) PRIMARY KEY,
+	DisplayName NVARCHAR(MAX) NOT NULL
+)
+GO
+CREATE TABLE accounts (
+	id int identity(1,1) PRIMARY KEY,
+	DisplayName NVARCHAR(MAX) NOT NULL,
+	Username NVARCHAR(50) NOT NULL,
+	Password NVARCHAR(MAX) NOT NULL,
+	Role int NOT NULL FOREIGN KEY REFERENCES Role(id)
+)
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO
+GO

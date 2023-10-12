@@ -47,20 +47,20 @@
     <Style x:Key="txbPrice" TargetType="TextBlock">
         <Setter Property="Foreground" Value="#d7d7d7"/>
         <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontSize" Value="17"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="5 0"/>
+        <Setter Property="Margin" Value="5"/>
     </Style>
     <Style x:Key="billButton" TargetType="Button">
         <Setter Property="Width" Value="130"/>
         <Setter Property="Height" Value="40"/>
-        <Setter Property="Margin" Value="3 0"/>
+        <Setter Property="Margin" Value="3 0 3 5"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" CornerRadius="25">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="22">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>

@@ -27,21 +27,22 @@
                 <StackPanel Margin="0 -10 0 0" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Style="{StaticResource txbHudLogin}" Text="Tên đăng nhập"/>
                     <Grid>
-                        <TextBox Style="{StaticResource txtHudUser}"/>
+                        <TextBox x:Name="Login_txtUsername" Style="{StaticResource txtHudUser}"/>
                         <Image Style="{StaticResource imgIconLogin}" Source="\Assets\user.png"/>
                     </Grid>
                     <TextBlock Style="{StaticResource txbHudLogin}" Text="Mật khẩu"/>
                     <Grid>
-                        <PasswordBox Style="{StaticResource pwbHudUser}"/>
+                        <PasswordBox x:Name="Login_txtPassword" Style="{StaticResource pwbHudUser}"/>
                         <Image Style="{StaticResource imgIconLogin}" Source="\Assets\password.png"/>
                     </Grid>
+                    <TextBlock x:Name="Login_hintWrongPassword" Text="Mật khẩu không hợp lệ !" Visibility="Collapsed" Foreground="Red" Margin="10 5 5 0"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button Command="{Binding LoginWindowCommand}" CommandParameter="{Binding ElementName=loginWindow}" Style="{StaticResource btnLoginLogin}" Grid.Column="0"/>
-                        <Button Command="{Binding CloseWindowCommand}" CommandParameter="{Binding ElementName=loginWindow}" Style="{StaticResource btnCloseLogin}" Grid.Column="1"/>
+                        <Button x:Name="Login_btnLogin" Command="{Binding LoginWindowCommand}" CommandParameter="{Binding ElementName=loginWindow}" Style="{StaticResource btnLoginLogin}" Grid.Column="0"/>
+                        <Button x:Name="Login_btnClose" Command="{Binding CloseWindowCommand}" CommandParameter="{Binding ElementName=loginWindow}" Style="{StaticResource btnCloseLogin}" Grid.Column="1"/>
                     </Grid>
                 </StackPanel>
             </Grid>
