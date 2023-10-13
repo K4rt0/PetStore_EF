@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace PetStore_EF.ViewModel
 {
-	public class BaseVM
+	public class BaseVM : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 
