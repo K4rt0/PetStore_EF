@@ -24,9 +24,12 @@ namespace PetStore_EF.ViewModel
 		public ICommand UCCustomerCommand { get; set; }
 		public ICommand UCProductCommand { get; set; }
 		public ICommand UCReportCommand { get; set; }
+		public ICommand IsRadioButtonChecked { get; set; }
 		public string ContentCardInfo { get => _ContentCardInfo; set => _ContentCardInfo = value; }
+		//public bool IsRadioButtonChecked { get => _IsRadioButtonChecked; set { _IsRadioButtonChecked = value; OnPropertyChanged(); } }
 
 		private string _ContentCardInfo;
+		//private bool _IsRadioButtonChecked;
 
 		public MainVM()
 		{
@@ -49,17 +52,11 @@ namespace PetStore_EF.ViewModel
 				else
 					p.Close();
 			});
-
+			IsRadioButtonChecked = new RelayCommand<ContentControl>(p => { return true; }, p => { p.Content = new UC_Menu_Home(); });
 			UCHomeCommand = new RelayCommand<ContentControl>(p => { return true; }, p => { p.Content = new UC_Menu_Home(); });
-			UCCustomerCommand = new RelayCommand<ContentControl>(p => { return true; }, p =>
-			{
-			
-			});
+			UCCustomerCommand = new RelayCommand<ContentControl>(p => { return true; }, p => { });
 			UCProductCommand = new RelayCommand<ContentControl>(p => { return true; }, p => { p.Content = new UC_Menu_Product(); });
-			UCReportCommand = new RelayCommand<ContentControl>(p => { return true; }, p =>
-			{
-			
-			});
+			UCReportCommand = new RelayCommand<ContentControl>(p => { return true; }, p => { });
 		}
 	}
 }

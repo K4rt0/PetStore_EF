@@ -26,5 +26,5 @@ namespace PetStore_EF
 		{
 			InitializeComponent();
 		}
-    }
+	}
 }

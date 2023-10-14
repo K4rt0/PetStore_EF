@@ -19,6 +19,7 @@
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedMainWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"/>
+            <i:InvokeCommandAction Command="{Binding UCHomeCommand}" CommandParameter="{Binding ElementName=contentCtl}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
@@ -52,7 +53,7 @@
                             <!-- Menu Button -->
                             <Grid DockPanel.Dock="Top" Margin="0 20 0 0">
                                 <StackPanel>
-                                    <RadioButton x:Name="rdBtnHome" Command="{Binding UCHomeCommand}" CommandParameter="{Binding ElementName=contentCtl}" Tag="\Assets\home.png" Content="Trang chủ" Style="{StaticResource menuButton}"/>
+                                    <RadioButton x:Name="rdBtnHome" Command="{Binding UCHomeCommand}" CommandParameter="{Binding ElementName=contentCtl}" Tag="\Assets\home.png" Content="Trang chủ" Style="{StaticResource menuButton}" IsChecked="True"/>
                                     <RadioButton x:Name="rdBtnCustomer" Command="{Binding UCCustomerCommand}" CommandParameter="{Binding ElementName=contentCtl}" Tag="\Assets\customer.png" Content="Khách hàng" Style="{StaticResource menuButton}"/>
                                     <RadioButton x:Name="rdBtnProduct" Command="{Binding UCProductCommand}" CommandParameter="{Binding ElementName=contentCtl}" Tag="\Assets\product.png" Content="Sản phẩm" Style="{StaticResource menuButton}"/>
                                     <RadioButton x:Name="rdBtnReport" Command="{Binding UCReportCommand}" CommandParameter="{Binding ElementName=contentCtl}" Tag="\Assets\report.png" Content="Báo cáo" Style="{StaticResource menuButton}"/>
@@ -67,7 +68,6 @@
                 <!-- Main Menu -->
                 <Grid Grid.Column="1" Margin="1 0 0 0">
                     <ContentControl x:Name="contentCtl"/>
-                    <!--<uc:UC_Menu_Product/>-->
                 </Grid>
             </Grid>
         </Border>
