@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="PetStore_EF.View.UserControls.UC_Menu_Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PetStore_EF.View.UserControls"
+             mc:Ignorable="d">
+    <Border Background="#373737" CornerRadius="0 0 8 0">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid Width="Auto" Height="Auto" Margin="20">
+                <StackPanel>
+                    <Button Content="Pet Store" Tag="{Binding ContentCardInfo}" Style="{StaticResource tentCardInfo}" Background="LightBlue"/>
+                    <StackPanel Width="Auto" Height="Auto">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Content="Dương Khoa Nam" Tag="\Assets\Avatar\KartoAvatar.jpg" Style="{StaticResource tentCardProfileLeaderBackend}"/>
+                            <Button Grid.Column="1" Content="Ngô Thái Hoàn" Tag="\Assets\Avatar\HoanAvatar.jpg" Style="{StaticResource tentCardProfileLeaderBackend}"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Content="Trần Văn Toàn" Tag="\Assets\Avatar\TonaAvatar.jpg" Style="{StaticResource tentCardProfileLeaderBackend}"/>
+                            <Button Grid.Column="1" Content="Phạm Huỳnh Ngọc Hiếu" Tag="\Assets\Avatar\HieuAvatar.jpg" Style="{StaticResource tentCardProfileLeaderBackend}"/>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+</UserControl>

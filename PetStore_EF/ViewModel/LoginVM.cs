@@ -46,21 +46,23 @@ namespace PetStore_EF.ViewModel
 				t.Text = hashPassword("admin");
 				w.Content = t;
 				w.Show();*/
+				IsLogin = true; p.Close();
 
-				if (!IsUserExists(Username))
+				/*if (!IsUserExists(Username))
 					showHint("Tài khoản không tồn tại trong hệ thống.");
 				else if (Password.Length == 0 || !verifyPassword(Password, getPassword(Username)))
 					showHint("Mật khẩu không hợp lệ.");
 				else if (Username.Length == 0)
 					showHint("Không được bỏ trống tên đăng nhập.");
-				else { IsLogin = true; p.Close(); }
+				else { IsLogin = true; p.Close(); }*/
+
 			});
 			TextChangedUsernameCommand = new RelayCommand<TextBox>(p => { return true; }, p => { VisibilityErrorMessage = Visibility.Collapsed; });
 			PasswordChangedPasswordCommand = new RelayCommand<PasswordBox>(p => { return true; }, p => { VisibilityErrorMessage = Visibility.Collapsed; Password = p.Password; });
 		}
 		void showHint(string hint)
 		{
-			TextVisibilityErrorMessage = hint;
+			TextVisibilityErrorMessage = "* " + hint;
 			VisibilityErrorMessage = Visibility.Visible;
 		}
 		string getPassword(string username) => DataProvider.Ins.DB.accounts.Where(p => p.Username == username).FirstOrDefault().Password;
